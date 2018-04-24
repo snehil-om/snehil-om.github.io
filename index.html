@@ -11775,11 +11775,38 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1><center>Recommendation On Fantasy League - ROFL</center></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="fantasy-premier-league-show.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1><p>Soccer is one of the most followed games in the world, and English Premier League(EPL) is highest earning, most competitive and most watched sports league. As soccer lovers, this experience extends beyond viewing the game and participating in Fantasy Premier Leagues and even betting, which may or may not include monetary transactions.
 The popularity of FPL can be judged from the fact that more than 4 million people in Britain itself play the league annually.</p>
 <p>Fantasy football is a game in which participants assemble an imaginary team of real life footballers and score points based on those players' actual statistical performance or their perceived contribution on the field of play. The fantasy football league ask participants to select 15 players within a price budget, with the combination of 2 goalkeepers, 5 defenders, 5 midfielders and 3 forwards. The game is run over 38 gameweeks, where each gameweek comprises of 10 matches of 20 teams. The aim of the game is to score as many points as possible. The scoring is done based on some factors, like, player appearance, goals scored, assists, clean sheets, penalties, wins. The scoring is adversely affected if goals are scored against the team, yellow or red card received, penalty misses, own goals and loss.</p>
+<p><img src="EPL-1.jpg"></p>
 <h2 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h2><p>As soccer fans and budding data scientists, we plan to tackle the problem of selecting players in an optimal and unbiased way. Most people, around the world, place bets based on emotions, expert advice or player popularity. At best, they consider past performances or statistics to find the optimal bet. We plan to build a recommender engine that ranks the players of different categories(Forward, Midfielder, Defender, Goalkeeper) and lets the user build his own team.</p>
 <p>Our motivation of this project is to help soccer fans make informed decisions. Since our algorithms has no biases towards players, it helps bring relatively unknown players who are performing very well into limelight. This is due to the fact that we take into consideration unique features.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img1.jpg"></p>
 
 </div>
 </div>
@@ -11792,6 +11819,8 @@ The popularity of FPL can be judged from the fact that more than 4 million peopl
 <p>Related work include Fantasy Football Fix(<a href="https://www.fantasyfootballfix.com/">https://www.fantasyfootballfix.com/</a>), which has features like predicting which players will change in value and when, showing player points projects based on past statistics. The work suffers from the drawback that the onus is on user to create his own team and try out different team combinations based on points predicted and optimizations suggested. 
 Fantasy Football Geek(<a href="http://www.fantasyfootballgeek.co.uk/">http://www.fantasyfootballgeek.co.uk/</a>) and Scout(<a href="https://www.fantasyfootballscout.co.uk/">https://www.fantasyfootballscout.co.uk/</a>) post news, tips and tricks, player rankings, game analysis, etc based on expert opinions but do not provide actual recommendations that our project aims to do.</p>
 <p>Our project provides recommendations based on players data from recent and past performances. We provide recommendations on different categories, like top 10 attackers, defenders, midfielders and goalkeepers, which will help the user to build his own team. Unlike other subscription based solutions, we aim to make our project free for all soccer fans. By providing recommendations in each category, we provide a simplistic and easy to use solution for everyone. These differences certainly prove to be beneficial to users.</p>
+<p>from IPython.display import HTML, display
+display(HTML("<table><tr><td><img src='fantasyfix.png'></td><td><img src='fantasyfix2.png'></td></tr></table>"))</p>
 
 </div>
 </div>
@@ -11800,7 +11829,8 @@ Fantasy Football Geek(<a href="http://www.fantasyfootballgeek.co.uk/">http://www
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Proposed-solution">Proposed solution<a class="anchor-link" href="#Proposed-solution">&#182;</a></h1>
+<h1 id="Proposed-solution">Proposed solution<a class="anchor-link" href="#Proposed-solution">&#182;</a></h1><p><img src="flow.png"></p>
+
 </div>
 </div>
 </div>
@@ -13650,6 +13680,33 @@ MID:  279
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Evaluation-and-analysis">Evaluation and analysis<a class="anchor-link" href="#Evaluation-and-analysis">&#182;</a></h1><ol>
+<li><p>Results on different models:
+We ran 4 models on all four positions to rank players for each gameweek. Four models are Linear Regression, Bayesian Ridge Regression, SVR and Ranking SVM. Ranking SVM outperformed all other methods(Regression, Bayesian Ridge, and SVR) showing that for ranking, pairwise comparison is always better and scoring based on regression models.</p>
+</li>
+<li><p>Evaluation metrics - precision:
+We use precision for top 10 players. Our predicted top 10 players in each category is compared against the actual top 10 players for that gameweek.</p>
+</li>
+<li><p>Analysis:
+We furthur analysed the effect of implicit, explicit and global factors on player performance prediction. We observed that player current trend is the most important feature in predicting performance for the next gameweek. Implicit features such as ict_index offer little advantage, boosting the performance by 0.1.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Forward:">Forward:<a class="anchor-link" href="#Forward:">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[227]:</div>
@@ -14627,6 +14684,20 @@ MID:  279
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Result-and-Discussion:">Result and Discussion:<a class="anchor-link" href="#Result-and-Discussion:">&#182;</a></h2><p>We observe that:</p>
+<ol>
+<li>Ranking SVM outperformed all other factors by a significant amount, reaching 0.9 precision in some gameweeks.</li>
+<li>Player's past history gives a slight improvement over only current trend, giving more score to players who are currently not in form but have been phenomenal in the past.</li>
+<li>Implicit factors give slight improvement over explicit, though not over all gameweeks.</li>
+</ol>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
